@@ -3,7 +3,7 @@ var logID = '[VISA CONTROLLER]';
 
 exports.getVisa = (req, res) => {
 
-    let stmt = `SELECT c.name, v.condition, v.stay 
+    let stmt = `SELECT c.name, v.information, v.stay 
                     FROM visas v 
                 JOIN countries c on c.id = v.country_id 
                 WHERE c.id = ?`;
